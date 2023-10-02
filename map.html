@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Location</title>
+    <style>
+        /* Add CSS styles for the map container (you can customize this) */
+        #map-container {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="styles/map.css">
+    <link rel="icon" href="images/favicon.webp" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Our Store Location</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="registration.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="map-container">
+        <!-- This is where the map will be displayed -->
+        <h2>Visit Our Store Location</h2>
+        <p>We are located at:</p>
+        <address>
+            123 Flower Street<br>
+            Cityville, FL 12345<br>
+            United States
+        </address>
+    
+        <p>Come and explore our wide selection of fresh and beautiful flowers!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Mokka Flowers</p>
+    </footer>
+
+    <script>
+        // Initialize and display the map
+        function initMap() {
+            const mapCenter = { lat: 48.17460660009672, lng: 25.76999431202636 };
+            const map = new google.maps.Map(document.getElementById("map-container"), {
+                center: mapCenter,
+                zoom: 15, // You can adjust the zoom level as needed
+            });
+
+            // Add a marker at the store location
+            const marker = new google.maps.Marker({
+                position: mapCenter,
+                map: map,
+                title: "Flower Shop Location",
+            });
+        }
+    </script>
+
+   <!-- Include the Google Maps JavaScript API with your API key -->
+<script async defer 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSN8wJplD1DVdw0MQsEA_M5pEnBx3dtOs&callback=initMap" ></script>
+
+</html>

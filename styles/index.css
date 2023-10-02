@@ -1,0 +1,316 @@
+/* Reset some default styles for better consistency */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+/* CSS in your mainshop.css file or a separate CSS file */
+.cart {
+    z-index: 2;
+    position: sticky;
+    display: flex;
+    margin-top: 1%;
+    float: right;
+    top: 40px; /* Adjust the top position as needed */
+    right: 25px; /* Adjust the right position as needed */
+}
+
+.cart a {
+    text-decoration: none;
+    font-size: 16px; /* Adjust the font size as needed */
+    color: #333; /* Adjust the color as needed */
+}
+
+.cart img {
+    background-color: grey;
+    width: 45px; /* Adjust the width of the cart icon as needed */
+    height: auto; /* Adjust the height of the cart icon as needed */
+    vertical-align: middle;
+    margin-right: 5px; /* Add some spacing between the icon and text */
+    border-radius: 35%; /* Apply rounded edges to the image */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow for a raised effect */
+}
+
+
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero section */
+.hero {
+    /* background-image:  linear-gradient(-45deg, transparent 15px, rgba(255, 255, 255, 0.52), 
+    rgba(244, 99, 208, 0.73)), url('../images/flowers.jpg'); */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+    background-image: url('../images/flowers.jpg');
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff; 
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); 
+    position: relative;
+    z-index: 1;
+}
+
+.hero p {
+    color: #fff;
+    font-size:1rem; /* Зменшуємо розмір шрифта при наведенні */
+    margin-top: 10px; /* Додатковий відступ відгори при наведенні */
+    transition: font-size 1s ease, margin-top 1s ease; /* Плавна анімація */
+    position: absolute;
+    top: 60%; /* Зсуваємо текст вниз від попереднього тексту */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    opacity: 0; /* Робимо текст невидимим за замовчуванням */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(-45deg, transparent 15px, rgba(255, 255, 255, 0.52), rgba(244, 99, 208, 0.73));
+    opacity: 1;
+    transition: opacity 3s ease; /* Плавна анімація зникнення градієнту */
+    z-index: 1;
+}
+
+.hero:hover::before {
+    opacity: 0; /* Зникає градієнт при наведенні */
+}
+
+/* Завдані стилі для .hero при наведенні курсора */
+.hero:hover p {
+    font-size: 1.5rem; /* Зменшуємо розмір шрифта при наведенні */
+    margin-top: 0; /* Відступ відгори відміняється при наведенні */
+    white-space: nowrap; /* Запобігаємо переносу тексту на новий рядок */
+    opacity: 1; /* Текст стає видимим при наведенні */
+}
+
+/* Стилі для поля пошуку */
+.search-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.search-bar {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    height: 33px; /* Задаємо висоту поля пошуку */
+    line-height: 40px; /* Забезпечуємо однакову висоту для тексту та значка */
+}
+
+.search-btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-btn img{
+    width: 40px; /* Adjust the width of the cart icon as needed */
+    height: 35px; /* Adjust the height of the cart icon as needed */
+    vertical-align: middle;
+    margin-right: 5px; /* Add some spacing between the icon and text */
+    border-radius: 100%; /* Apply rounded edges to the image */
+}
+
+.search-btn:hover {
+    background-color: #4CAF50;
+}
+
+/* Додавання значка пошуку (використовуючи FontAwesome) */
+.search-btn i {
+    font-size: 18px;
+}
+
+
+
+/* Product section */
+.product {
+    width: calc(50% - 20px); /* Set the width to 50% minus some margin for spacing */
+    margin-right: 20px; /* Add a margin between products */
+    box-sizing: border-box; /* Include padding and border in the width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px; /* Add margin at the bottom to separate rows */
+}
+
+.product:last-child {
+    margin-right: 0; /* Remove margin from the last product in each row */
+}
+
+#shop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.shop-heading{
+    text-align: center;
+}
+
+/* Updated button styles */
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Apply the button styles to the "Add to Cart" buttons */
+.add-to-cart-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #45a049;
+}
+
+
+.product img {
+    max-width: 100%;
+}
+
+/* About section */
+#about {
+    background-color: #fff;
+}
+
+
+  
+  /* Style the contact info container */
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Add this line to center horizontally */
+    text-align: center; /* Center the text within the container */
+  }
+  
+  /* Style the phone label */
+  .phone-label {
+    margin-right: 10px; /* Add spacing between "Phone:" and the dropdown */
+  }
+
+  .dropdown{
+    color: #4CAF50;
+  }
+  
+  /* Style the dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  } 
+  
+
+/* Contact section */
+#contact {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* Add this at the end of your existing CSS file */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#scrollButton {
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#scrollButton img {
+    width: 100%;
+    height: 100%;
+}
+
+#scrollButton:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}

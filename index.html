@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Shop</title>
+    <link rel="icon" href="images/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="styles/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Mokka Flowers</h1>
+        <!-- <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="map.html">Store Location</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <div class="cart">
+                    <a href="cart.html"><img src="images/cart.jpg" alt="Cart"></a>
+                </div>
+            </ul>
+        </nav> -->
+        <nav class="navbar navbar-expand-sm navbar-dark grey">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="https://www.instagram.com/mokka_flowers/"><img src="images/Logo.jpg"
+                        alt="Logo" style="border-radius: 50%; border-color: #45a049; width: 100px; height: auto;"></a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mynavbar" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item" style="margin-top:-12px;">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item" style="margin-top:-12px;">
+                            <a class="nav-link" href="#shop">Shop</a>
+                        </li>
+                        <li class="nav-item" style="margin-top:-12px;">
+                            <a class="nav-link" href="#about">About Us</a>
+                        </li>
+                        <li class="nav-item" style="margin-top:-12px;">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item" style="margin-top:-12px;">
+                            <a class="nav-link" href="map.html">Store Location</a>
+                        </li>
+                        <li class="nav-item" style="margin-top:-12px;">
+                            <a class="nav-link" href="reviews.html">Reviews</a>
+                        </li>
+                        <li class="nav-item" style="margin-top:-12px;">
+                            <!-- <a class="nav-link" href="registration.html">Register</a> -->
+                            <a class="btn nav-link" data-bs-toggle="modal" data-bs-target="#myModal">Register</a>
+
+                            <div class="modal" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+
+                                        <form action="#home">
+                                            <div class="mb-3 mt-3 ">
+                                                <label for="email" class="form-label text-secondary">Email:</label>
+                                                <input type="email"
+                                                    class="form-control border border-2 border-success rounded-pill"
+                                                    id="email" placeholder="Enter email" name="email">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="pwd" class="form-label text-secondary">Password:</label>
+                                                <input type="password"
+                                                    class="form-control border border-2 border-success rounded-pill"
+                                                    id="pwd" placeholder="Enter password" name="pswd">
+                                            </div>
+                                            <div class="form-check mb-3">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input " type="checkbox" name="remember">
+                                                    <p class="text-secondary">Remember me</p>
+                                                </label>
+                                            </div>
+                                            <button type="submit" class="btn btn-outline-success">Submit</button>
+                                        </form>
+                                        <!-- Modal footer -->
+                                        <footer>
+                                            <p>&copy; 2023 Mokka Flowers</p>
+                                        </footer>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="text" placeholder="Search">
+                        <button class="btn btn-outline-success" type="button">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="cart">
+        <a href="cart.html"><img src="images/cart.jpg" alt="Cart"></a>
+    </div>
+
+    <section id="home">
+        <div class="hero">
+            <h2>Beautiful Flowers for Every Occasion</h2>
+            <p>Discover a wide variety of fresh flowers to brighten up your day.</p>
+        </div>
+    </section>
+
+    <h2 class="shop-heading">Shop Our Selection</h2>
+
+    <section id="shop">
+
+
+        <div class="product">
+            <img src="images/rose.jpg" class="img-fluid" alt="Red Rose">
+            <h3>Red Rose</h3>
+            <p>Price: $10.99</p>
+            <button class="btn btn-outline-success">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/tulip.webp" alt="Pink Tulip">
+            <h3>Pink Tulip</h3>
+            <p>Price: $8.99</p>
+            <button class="btn btn-outline-success">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/lily.jpg" alt="White Lily">
+            <h3>White Lily</h3>
+            <p>Price: $12.99</p>
+            <button class="btn btn-outline-success">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/daisy.webp" alt="Yellow Daisy">
+            <h3>Yellow Daisy</h3>
+            <p>Price: $7.99</p>
+            <button class="btn btn-outline-success">Add to Cart</button>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a family-owned flower shop committed to providing the freshest and most beautiful flowers in town. Our
+            team of skilled florists is dedicated to creating stunning arrangements for all occasions.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to place an order, please don't hesitate to contact us:</p>
+        <address>
+            Email: <a href="mailto:info@flowershop.com">stasik_i_bogdan@flowershop.com</a><br>
+            <div class="contact-info">
+                <span class="phone-label">Phone:</span>
+                <div class="dropdown">
+                    <div class="dropdown dropend float-left" style="margin:16px 0 24px 0">
+                        <button class="btn btn-outline-success" type="button" id="dropdownMenuButtonright"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            +380
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a class="dropdown-item" href="#">680915479</a>
+                            <a class="dropdown-item" href="#">993279005</a>
+                            <a class="dropdown-item" href="#">685570291</a>
+                        </div>
+                    </div>
+
+        </address>
+    </section>
+
+
+    <div class="scroll-to-top">
+        <a id="scrollButton">
+            <img src="images/arrow-up.png" alt="Scroll to Top">
+        </a>
+    </div>
+
+    <script>
+        const scrollButton = document.getElementById('scrollButton');
+
+        scrollButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2023 Mokka Flowers</p>
+    </footer>
+</body>
+
+</html>
